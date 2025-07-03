@@ -1,4 +1,5 @@
 #include<iostream>
+#include<limits.h>
 using namespace std;
 
 /*
@@ -12,7 +13,8 @@ int main(){
 
     //initialization
     int i=1;
-    int maxi=-1;//stores the maximum number of N inputs
+    int maxi=INT_MIN;//stores the maximum number of N inputs  
+    //-infinity= INT_MIN and +infinity= INT_MAX
 
     //loop condition
     while(i<=N){
@@ -22,13 +24,9 @@ int main(){
 
         if(num>maxi){
             maxi=num;
-            i=i+1;
         }
 
-        else{
-
-            i=i+1;
-        }
+        i=i+1;
     }
 
     cout<<"max number is:"<<maxi<<endl;

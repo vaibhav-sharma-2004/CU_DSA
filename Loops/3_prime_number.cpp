@@ -10,16 +10,16 @@ int main(){
     int n;
     cin>>n;
 
-    //intialize
+    //intialization
     int i=2;
 
     //loop condition
-    while(i<n){
+    while(i<=n-1){  // i<n and i<=n-1 are same
 
+        //work
         if(n%i==0){
-            cout<<"it is not a prime number";
-            //stop
-            return 0;
+            cout<<"not prime number"<<endl;
+            return 0;//exit from program
         }
 
         //updation
@@ -27,5 +27,11 @@ int main(){
     }
 
     cout<<"prime number";
-    return 0;
+
+    //check if number is even or odd
+    if(n%2==0){
+        
+    }
+
+    return 0;//exit 
 }

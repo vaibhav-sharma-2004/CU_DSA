@@ -18,14 +18,17 @@ int main(){
     int row=1;
     int num=1;
 
-    while(row<=n){
-
+    while(row<=n)
+    {
         int col=1;
 
         while(col<=row){
 
+            //print
             cout<<num<<" ";
 
+
+            //updation
             num=num+1;
             col=col+1;
         }

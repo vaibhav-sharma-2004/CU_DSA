@@ -10,13 +10,14 @@ int main(){
     int n;
     cin>>n;
 
-    //initialization
+
+    //initialize
     int i=1;
 
-    //loop condition
+    //condition
     while(i<=n){
 
-        //work
+        //work->print i
         cout<<i<<" ";
 
         //updation

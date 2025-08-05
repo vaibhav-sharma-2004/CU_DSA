@@ -8,16 +8,19 @@ input a number N from user and take N more number inputs, print the largest numb
 
 int main(){
 
-    int N;
-    cin>>N;//number of inputs
+    int n;
+    cin>>n;
 
-    //initialization
     int i=1;
-    int maxi=INT_MIN;//stores the maximum number of N inputs  
-    //-infinity= INT_MIN and +infinity= INT_MAX
+    int maxi=INT_MIN;
+
+    int mini=INT_MAX;
+
+    cout<<"maxi:"<<maxi<<endl;
+    cout<<"mini:"<<mini<<endl;
 
     //loop condition
-    while(i<=N){
+    while(i<=n){
 
         int num;
         cin>>num;
@@ -26,10 +29,15 @@ int main(){
             maxi=num;
         }
 
+        if(num<mini){
+            mini=num;
+        }
+
         i=i+1;
     }
 
-    cout<<"max number is:"<<maxi<<endl;
+    cout<<"maximum number is:"<<maxi<<endl;
+    cout<<"minimum number is:"<<mini<<endl;
 
-    return 0; 
+    return 0;
 }

@@ -16,30 +16,30 @@ print the below pattern
 
 int main(){
 
-    //input total no of rows from user
-    int n;
-    cin>>n;
+    int n=5;
 
-    //intialize
+    //initialization
     int row=1;
 
     //loop condition
-    while(row<=n){
+    while(row<=n){//OUTER LOOP
 
-        //coloum in each row
+        //work
+
+        //intitialization
         int col=1;
 
-        //printing * symbol row number of times
-        while(col<=row){
+        //loop condition
+        while(col<=row){ //INNER LOOP
 
+            //work
             cout<<"*";
 
             //updation
             col=col+1;
         }
 
-        //go to new line
-        cout<<'\n';
+        cout<<endl;
 
         //updation
         row=row+1;

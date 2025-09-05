@@ -3,25 +3,21 @@ using namespace std;
 
 int main(){
 
-    int initial;
-    cin>>initial;
+    int intitial=0;
+    int last=300;
+    int step=20;
 
-    int last;
-    cin>>last;
+    //initialization
+    int f=intitial;
 
-    int step;
-    cin>>step;
+    //loop condition
+    while(f<=300){
 
-    // int eg=1.232;
-    // cout<<eg<<endl;
-
-    while(initial<=last){
-
-        float cel= (5/9.0)*(initial-32);
-
-        cout<<cel<<endl;
-
-        initial=initial+step;
+        //work
+        float c= (float(5)/9) * (f-32);
+        cout<<c<<endl;
+        //updation
+        f=f+step;
     }
 
     return 0;

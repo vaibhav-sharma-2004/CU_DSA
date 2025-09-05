@@ -13,10 +13,7 @@ int main(){
     cin>>rate;
     cin>>time;
 
-    float SI;
+    float SI=(principle*rate*time)/100.0;
 
-    SI= (principle*rate*time)/(100.0) ;
-
-    cout<<"simple interest is:"<<SI<<endl;
-    return 0;
+    cout<<"simple interst:"<<SI<<endl;
 }

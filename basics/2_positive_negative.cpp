@@ -7,19 +7,19 @@ problem: input a number and check if it is positive or negative
 
 int main(){
 
-    int n;
-    cin>>n;
+    int num;
+    cin>>num;
 
-    if(n>0){
-        cout<<"positive number"<<endl;
+    if(num>0){
+        cout<<"positive number";
     }
 
-    else if(n==0){
-        cout<<"number is zero"<<endl;
+    else if(num==0){
+        cout<<"zero";
     }
-
+    
     else{
-        cout<<"negative number"<<endl;
+        cout<<"negative number";
     }
 
     return 0;

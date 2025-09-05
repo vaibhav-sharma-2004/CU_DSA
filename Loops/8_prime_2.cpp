@@ -10,29 +10,24 @@ int main(){
     int n;
     cin>>n;
 
-    //intialize
     int i=2;
-    int flag=1; // tells if a number is prime or not 
-    //when flag is 1 it means that number is prime and when flag is 0 then the number is not prime
+    int flag=1;// flag=1 means that my number is prime
 
-    //loop condition
-    while(i<n){
+    while(i<=n-1){
 
         if(n%i==0){
-
-            flag=0;
+            flag=0;//flag =0 means that my number is not prime
+            break;
         }
-
-        //updation
         i=i+1;
     }
 
     if(flag==1){
-        cout<<"number is prime"<<endl;
+        cout<<"prime number"<<endl;
     }
 
     else{
-        cout<<"number is not prime"<<endl;
+        cout<<"not a prime number"<<endl;
     }
 
     return 0;

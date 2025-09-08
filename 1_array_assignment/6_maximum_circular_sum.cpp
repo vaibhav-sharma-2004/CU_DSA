@@ -20,46 +20,43 @@ int main()
             cin >> a[i];
         }
 
-        int minSum = 0;
-        int sum = 0;
-        int totalSum = 0;
+        int curr_max=a[0];
+        int curr_min=a[0];
 
-        // step 1: find maximum circular subarray
-        for (int i = 0; i < n; i++)
+        int totalSum=a[0];
+        int linearSum=a[0];
+        int circularSum=a[0];
+
+        int minSum=a[0];
+
+        for(int i=1;i<n;i++)
         {
-            totalSum += a[i];
-            sum += a[i];
+            totalSum+=a[i];
 
-            if (sum > 0)
-            {
-                sum = 0;
-            }
+            //current maximum sum find kro
 
-            minSum = min(minSum, sum);
-        }
-        int circularSum = totalSum - minSum;
+            curr_max=max(curr_max+a[i],a[i]);
 
-        // step 2: find maximum subarray
+            curr_min=min(curr_min+a[i],a[i]);
 
-        int KadaneSum = 0;
-        sum = 0;
+            linearSum=max(linearSum,curr_max);
 
-        for (int i = 0; i < n; i++)
-        {
-            sum += a[i];
+            minSum=min(curr_min,minSum);
 
-            if (sum < 0)
-            {
-                sum = 0;
-            }
-
-            KadaneSum = max(KadaneSum, sum);
         }
 
-        int ans=max(KadaneSum,circularSum);
-        
+        circularSum=totalSum-minSum;
 
-        cout << ans<< endl;
+        if(linearSum<0){
+
+            cout<<linearSum<<endl;
+        }
+
+        else{
+            int ans=max(linearSum,circularSum);
+            cout<<ans<<endl;
+        }
+
     }
 
     return 0;
